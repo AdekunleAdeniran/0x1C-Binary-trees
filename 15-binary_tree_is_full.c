@@ -14,9 +14,9 @@ size_t is_leaf(const binary_tree_t *tree)
 }
 
 /**
- *
- *
- *
+ * binary_tree_is_full - C function to check if binary tree is full
+ * @tree: pointer to tree/node to be checked
+ * Return: 1 if true, 0 if false
  */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
@@ -24,9 +24,8 @@ int binary_tree_is_full(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
-
 	if (is_leaf(tree))
-	    return (1);
+		return (1);
 
 	nodes_l = binary_tree_is_full(tree->left);
 	nodes_r = binary_tree_is_full(tree->right);
