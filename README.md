@@ -14,3 +14,12 @@
 * What are the different traversal methods to go through a binary tree
 * What is a complete, a full, a perfect, a balanced binary tree
 
+### Environment
+* Language: C (version C89)
+* OS: Ubuntu 14.04 LTS
+* Compiler: gcc 4.8.4
+* Style guidelines: [Betty style](https://github.com/holbertonschool/Betty/wiki)
+---
+### Authors
+Adekunle Adeniran [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/30px-Twitter_Bird.svg\.png)](https://twitter.com/flourishcodes)
+Melissa Ng [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/30px-Twitter_Bird.svg.\png)](https://twitter.com/MelissaNg__)
