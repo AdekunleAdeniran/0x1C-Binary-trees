@@ -1,6 +1,6 @@
 ## 0x1C. C - Binary trees
 
-![](https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjCpfrl-IPcAhXmiFQKHQ2cARQQjRx6BAgBEAU&url=https%3A%2F%2Fimgur.com%2Fgallery%2FqasHfah&psig=AOvVaw0ZG63kZ8bmB15e_kBeHIfQ&ust=1530742086971345)
+![](http://new.gctm-resources.org/migrating/644-01.png)
 
 **What you should learn from this project**
 
