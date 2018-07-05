@@ -11,7 +11,7 @@
 bst_t *array_to_bst(int *array, size_t size)
 {
 	size_t idx;
-	bst *root = NULL;
+	bst_t *root = NULL;
 
 	if (!array)
 		return (NULL);
