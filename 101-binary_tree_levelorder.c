@@ -10,7 +10,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 {
 	size_t height_l, height_r;
 
-	if (tree == NULL)
+	if (tree == NULL || (tree->left == NULL && tree->right == NULL))
 		return (0);
 
 	height_l = binary_tree_height(tree->left);
@@ -20,36 +20,23 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	return (height_r + 1);
 }
 /**
- * printGivenLevel - C Function to print values at all levels of binary tree
+ * printLevel - C Function to print values at all levels of binary tree
  * @tree: pointer to tree/nodes whose values will be printed
+ * @func: pointer to value to be printed
  * @level: level at which values will be printed
  * Return: printed values
  */
-void printGivenLevel(const binary_tree_t *tree, int level)
+void printLevel(const binary_tree_t *tree, void (*func)(int), size_t level)
 {
 	if (tree == NULL)
 		return;
 	if (level == 1)
-		printf("%d\n", tree->n);
+		func(tree->n);
 	else if (level > 1)
 	{
-		printGivenLevel(tree->left, level - 1);
-		printGivenLevel(tree->right, level - 1);
+		printLevel(tree->left, func, level - 1);
+		printLevel(tree->right, func, level - 1);
 	}
-}
-/**
- * printLevelOrder - C function to print in level order
- * @tree: pointer to node to be printed
- * Return: printed data
- */
-void printLevelOrder(const binary_tree_t *tree)
-{
-	int height = binary_tree_height(tree);
-	int count;
-
-	for (count = 1; count <= height; count++)
-		printGivenLevel(tree, count);
-
 }
 /**
  * binary_tree_levelorder - C function to print in level order
@@ -59,7 +46,11 @@ void printLevelOrder(const binary_tree_t *tree)
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
+	size_t height, count;
+
 	if (tree == NULL || func == NULL)
 		return;
-	printLevelOrder(tree);
+	height = binary_tree_height(tree) + 1;
+	for (count = 1; count <= height; count++)
+		printLevel(tree, func, count);
 }
